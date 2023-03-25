@@ -24,14 +24,15 @@ function App() {
 
   function handleSubmit(e){
     e.preventDefault()
-    console.log(form)
+    // console.log(form)
     let arr=data.filter((e)=>form.email===e.email)
-    if(arr){
-      return alert("User Found ")
-    }
+    // if(arr){
+    //   return alert("User Found ")
+    // }
 
     axios.post('https://test-api-v3.myways.ai/user',form).then((res)=>{
       console.log(res.data)
+      alert("User Created Successfully.")
     })
   }
 
